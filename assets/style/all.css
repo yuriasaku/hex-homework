@@ -1,7 +1,21 @@
 @charset "UTF-8";
 /*顏色設定*/
 /*文字設定*/
+/*字體設定*/
+/*匯入設定*/
 @import url(reset.css);
+/*mixin設定*/
+/*RWD設定*/
+body {
+  font-family: "Noto Sans TC", sans-serif; }
+
+img {
+  max-width: 100%; }
+
+.container {
+  width: 1110px;
+  margin: 0 auto; }
+
 .header {
   background-color: #AA0601;
   color: #fff;
@@ -13,6 +27,77 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 30px 88px; }
+  .header .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .header .menu li a {
+      padding-right: 64px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      text-decoration: none;
+      color: #fff; }
+      .header .menu li a:hover {
+        color: #ffb100;
+        -webkit-transition: all 0.8s;
+        -o-transition: all 0.8s;
+        transition: all 0.8s; }
+
+.menu li:last-child a {
+  padding-right: 0; }
+
+.logo {
+  width: 80px;
+  height: 49px; }
+
+.banner {
+  background: url(https://hungcurry.github.io/week03/assets/images/index/banner.png) no-repeat center;
+  height: 840px;
+  color: #650300; }
+  .banner .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: right;
+    height: 100%; }
+  .banner .text-sm {
+    font-size: 2.25rem;
+    margin-bottom: 16px; }
+  .banner .text-lg {
+    font-weight: bold;
+    font-size: 4rem; }
+
+.major h2 {
+  color: #650300;
+  font-size: 3rem;
+  font-weight: bold; }
+
+.material-icons-outlined {
+  font-family: "Material Icons Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr; }
 
 .footer {
   background-color: #AA0601;
