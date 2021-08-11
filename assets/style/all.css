@@ -1,23 +1,20 @@
+@charset "UTF-8";
+/*顏色設定*/
+/*文字設定*/
+@import url(reset.css);
 .header {
-  height: 200px;
-  background-color: #00cc99; }
-
-.footer {
-  height: 200px;
-  background-color: #00cc99; }
-
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+  background-color: #AA0601;
+  color: #fff;
+  font-size: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s; }
-  .box:hover {
-    width: 200px;
-    background-color: #00cc99; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.footer {
+  background-color: #AA0601;
+  color: #fff; }
 
 /*# sourceMappingURL=all.css.map */
