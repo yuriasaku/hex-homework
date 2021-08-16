@@ -1,23 +1,615 @@
-$color: #00cc99;
+/*匯入設定*/ 
+@import"variable.scss";
+@import "reset.scss";
+@import"layout.scss";
+@import"grid.scss";
+
 
 .header {
-  height: 200px;
-  background-color: #00cc99;
-}
-
-.footer {
-  height: 200px;
-  background-color: #00cc99;
-}
-
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+  background-color: $web-primary;
+  color: $font-secondary-color;
+  font-size: $h6-font-size;
   display: flex;
-  transition: all 0.5s;
-  &:hover {
-    width: 200px;
-    background-color: $color;
+  justify-content: space-between;
+  padding: 30px 88px;
+  @include big-pad{
+    font-size: $h7-font-size;
   }
+  @include pad{
+    padding: 30px 39px;
+    @include mobile{
+      display: block;
+      padding: 0px;
+    }
+  }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mobile {
+      flex-wrap: wrap;
+     }
+     li{
+      @include mobile {
+      width: 50%;
+       }
+     }
+     li a{
+      padding-right: 64px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      text-decoration: none;
+      display: block;
+      color: $font-secondary-color;
+      @include mobile {
+        text-align: center;
+        padding: 8px 0;
+        border: 1px solid #fff;
+        }
+      &:hover{
+        color: $font-hover;
+        transition: all 0.8s;
+      }
+    }  
+}
+}
+.menu li:last-child a{
+  padding-right: 0;
+}
+
+.logo {
+  width: 80px;
+  height:49px;
+  @include mobile {
+    width: 48px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 10px 0;
+   }
+  &:hover{
+    opacity: 0.5;
+    transition: all 0.5s;
+  }
+}
+
+
+
+.banner{
+  background: url(../images/banner.png) no-repeat center;
+  height: 840px;
+  color: $font-primary-color;
+  @include mobile {
+    height: 494px;
+    background-size: cover;
+     }
+  .container{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    text-align: right;
+    height: 100%;
+  }
+  .text-sm{
+    font-size: $h3-font-size;
+    margin-bottom: 16px;
+    @include pad{
+      font-size: $h7-font-size;
+    }
+    @include mobile {
+      font-size: $font-size-base;
+       }
+  }
+  .text-lg{
+    font-weight: $font-primary-weight;
+    font-size: $h1-font-size;
+    @include pad{
+      font-size: $h2-font-size;
+    }
+    @include mobile {
+      font-size: $h3-font-size;
+       }
+  }
+}
+/*主要說明區塊設定*/ 
+.major{
+  background: #FBF2F2;
+  padding-bottom: $padding-top-80;
+  .container{
+    @include pad{
+      padding: 0 77px;
+    }
+    @include mobile {
+      padding: 0 60px;
+       }
+  }
+   h2{
+    @include h2-text-padding
+    color:$font-primary-color;
+    @include pad{
+      @include h2-text-padding-pad
+    }
+    @include mobile {
+      @include h2-text-padding-mobile
+       }
+  }
+}
+
+.major-items{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  @include pad{
+    flex-wrap: wrap;
+  }
+  li{
+    width: 23%;
+    @include pad{
+      width: 48%;
+    }
+    @include mobile {
+      width: 100%;
+       }
+  }
+  .material-icons-outlined{
+    font-size: 84px;
+    color: $font-primary-color;
+    display: block;
+    margin-bottom: 24px;
+  }
+  h5{
+    color: $font-primary-color;
+    font-size: $h6-font-size;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  p{
+    line-height: $line-height-base;
+    text-align: left;
+  }
+
+}
+
+
+
+
+/*經典系列區塊設定*/ 
+
+ .classic{
+   padding-bottom: 32px;
+   @include pad{
+     padding-bottom: 56px;
+    }
+    .container{
+      @include pad{
+        padding: $padding-container;
+       }
+      } 
+   h2{
+     @include h2-text-padding
+     color: $font-primary-color;
+     @include pad{
+      @include h2-text-padding-pad
+      }
+      @include mobile {
+       @include h2-text-padding-mobile
+      }
+   }
+ } 
+
+
+.classic-items li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include mobile {
+   justify-content: center;
+     }
+}
+  .series-img{
+    width: 58%;
+    max-width: 635px;
+    margin-bottom: 32px;
+    @include pad{
+      margin-bottom: 8px;
+    }
+    @include mobile{
+      width: 100%;
+      position: relative;
+        }
+    &:hover{
+      opacity: 0.5;
+      transition: all 0.8s;
+    }
+  }
+
+   .text-title{
+     width: 42%;
+     font-size: $h2-font-size;
+     color: $font-third-color;
+     font-weight: bold;
+     font-style: italic;
+     @include big-pad {
+       font-size: $h4-font-size;
+       margin-left: 32px;
+      }
+      @include mobile {
+         width: auto;
+         margin: 0 auto;
+         position: absolute;
+         align-items: center;
+        }
+    }
+
+.classic-items li{
+  .material-icons-outlined{
+    font-size: 44px;
+    color: $font-third-color;
+    display: inline-block;
+  }
+  &:nth-child(2){
+    flex-direction: row-reverse;
+    text-align: right;
+    @include pad {
+       flex-direction: row;
+       text-align: left;
+    }
+  }
+}
+
+/*聯名設計區塊設定*/ 
+.co-design{
+  background: url(../images/co-bg.png) no-repeat center;
+  height: 705px;
+  @include big-pad{
+    height: 580px;
+  }
+  @include pad{
+    height: 452px;
+  }
+  @include mobile {
+    height: auto;
+    }
+  .container{
+    padding: $padding-container;
+  }
+  h2{
+    color:$font-secondary-color;
+    @include h2-text-padding
+    @include pad{
+      @include h2-text-padding-pad
+    }
+    @include mobile {
+     @include h2-text-padding-mobile
+     }
+  }
+}
+
+.co-design-items{
+  display: flex;
+  justify-content:space-between;
+  @include mobile {
+    flex-wrap: wrap;
+    }
+  li{
+      width: 47.5%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include mobile {
+        width: 100%;
+        margin-bottom: 16px;
+        }
+  } 
+
+  .co-design-title{
+    font-size: $h-lg-font-size;
+    color:$font-third-color;
+    font-weight: bold;
+    position: absolute;
+    @include big-pad{
+      font-size: $h2-font-size;
+    }
+    @include pad{
+      font-size: $h4-font-size;
+    }
+   
+  }
+
+}
+.co-design-items{
+  .co-img {
+    &:before {
+      content: "";
+      display: block;
+      background: #fbf2f273;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+  }
+  }
+  }
+
+/*顧客推薦區塊設定*/
+ .recommen{
+  .container{
+    padding: $padding-container;
+  }
+   h2{
+    color:$font-primary-color;
+    @include h2-text-padding
+    @include pad{
+      @include h2-text-padding-pad
+    }
+    @include mobile {
+      @include h2-text-padding-mobile
+      }
+   }
+   .recommen-items{
+     display: flex;
+     justify-content: space-between; 
+     margin-bottom: 5rem;
+     @include pad{
+      flex-wrap: wrap;
+      margin-bottom: 3.5rem;
+    } 
+   }
+   li{
+     border:1px solid #DEE2E6;
+     width: 22.2%;
+     display: flex;
+     flex-direction: column; 
+     @include pad{
+       width: 47.5%;
+       margin-bottom: 32px;
+     } 
+     @include mobile {
+      width: 100%;
+       margin-bottom: 16px;
+      }
+   }
+  
+}
+.recommen li img {
+  @include mobile {
+    object-fit: cover;
+    }
+  
+}
+.recommen{
+   .title{
+     padding-bottom: 8px;
+   }
+   .desc-recom {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 173px;
+    @include mobile {
+      min-height: auto;
+      }
+    }
+}
+
+.desc-recom{
+    p{
+      line-height: $line-height-base;
+  } 
+}  
+
+/*聯絡我們區塊設定*/
+.contact{
+  background: #FBF2F2;
+  padding-bottom: 80px;
+  .container{
+    max-width: 760px;
+    @include big-pad{
+      max-width: 690px;
+    }
+    @include pad{
+      max-width: 450px;
+    }
+    @include mobile {
+      max-width: 430px;
+      }
+  }
+  h2{
+    color:$font-paragraph;
+    @include h2-text-padding
+    @include pad{
+      @include h2-text-padding-pad
+    }
+    @include mobile {
+      @include h2-text-padding-mobile
+      }
+  }
+  p{
+    line-height: $line-height-base;
+    padding-bottom: 8px;
+} 
+}
+
+.contact-items{
+  label {
+    display: block;
+    padding-bottom: 8px;
+  }
+  input,textarea{
+    width: 100%;
+    display: inline-block;
+    padding: 13px 10px;
+    font-size: $font-size-base;
+    margin-bottom: 16px;
+  }
+  input#use-checkbox {
+  float: left;
+  display: inline;
+  width: auto;
+}
+span.text {
+  display: block;
+  line-height: 1.5rem;
+}
+
+}
+
+.contact-items.btn {
+  margin-top: 40px;
+}
+
+
+button.btn-submit {
+  padding: 17px 147px;
+  background: $font-third-color;
+  color: $font-secondary-color;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  font-size: $font-size-base;
+  cursor: pointer;
+  @include pad{
+    padding: 10px 73px;
+  }
+  &:hover{
+    background: $font-primary-color;
+  }
+}
+
+/*footer區塊設定*/
+.footer-content {
+  background-color: $web-primary;
+  color: $font-secondary-color;
+  .container{
+    @include pad{
+      padding: $padding-container;
+    }
+  }
+  .box-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include mobile {
+      flex-wrap: nowrap;
+      flex-direction: row-reverse;
+      } 
+   
+}
+   ul.menu-footer { 
+     display: flex;
+     margin: 48px 0;  
+     font-size: $font-size-base;
+     @include pad{
+      margin: 38px 0 18px 0;  
+      @include mobile {
+        display: none;
+        }
+    }
+}
+   ul.social-icon {
+     display: flex;
+     margin-top: 24px;
+     @include pad{
+      margin-top: 32px;
+    }
+    @include mobile {
+      margin-top: 24px;
+      }
+}
+}
+
+  ul.menu-footer { 
+  li a{
+    color: $font-secondary-color;
+    text-decoration: none;
+    transition: all 0.8s;
+    padding-right: 48px;
+    &:hover{
+      color: $font-hover;
+    }
+  }
+} 
+
+ul.social-icon {
+  li a{
+    padding: 8px 0px 8px 16px;
+    display: block;
+    img{
+      @include pad{
+        width: 24px;
+      }
+      @include mobile {
+        width: auto;
+        }
+    }
+  }
+}
+
+.box-link {
+  width: 100%;
+  @include mobile {
+   margin-top: 24px;
+    } 
+  li{
+    margin-bottom: 24px;
+    @include mobile {
+      margin-bottom: 16px;
+       } 
+  }
+  li img{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin-right: 16px;
+    @include pad{
+    width: 20px;
+    height: 20px;
+    } 
+  }
+  li a{
+    font-size: $h4-font-size;
+    text-decoration: none;
+    color: $font-secondary-color;
+    @include pad{
+      font-size: $h7-font-size;
+      } 
+  }
+
+}
+
+.copyright {
+  border-top: 1px solid #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 36px 0;
+  @include mobile {
+    flex-wrap: wrap;
+    padding: 16px 0;
+    display: block;
+     } 
+     .descrip {
+      @include mobile {
+        margin-bottom: 16px;
+         } 
+  }
+  ul.box {
+    display: flex;
+    @include mobile {
+      display: block;
+       } 
+}
+   li a{
+     padding-left: 48px;
+     color: $font-secondary-color;
+     text-decoration: none;
+     @include mobile {
+      padding: 0 0 16px 0;
+      display: block;
+       } 
+   &:hover{
+     color:$font-hover;
+   }
+}
 }
