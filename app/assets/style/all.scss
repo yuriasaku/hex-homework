@@ -8,16 +8,14 @@
 .header {
   background-color: $web-primary;
   color: $font-secondary-color;
-  font-size: $h6-font-size;
+  font-size: $h7-font-size;
   display: flex;
   justify-content: space-between;
   padding: 30px 88px;
-  @include big-pad{
-    font-size: $h7-font-size;
-  }
-  @include pad{
+    @include pad {
     padding: 30px 39px;
-    @include mobile{
+  }
+    @include mobile {
       display: block;
       padding: 0px;
     }
@@ -52,7 +50,7 @@
       }
     }  
 }
-}
+
 .menu li:last-child a{
   padding-right: 0;
 }
