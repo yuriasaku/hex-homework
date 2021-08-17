@@ -72,7 +72,7 @@ img {
 .header {
   background-color: #AA0601;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,50 +80,48 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 30px 88px; }
-  @media (max-width: 992px) {
-    .header {
-      font-size: 1.25rem; } }
   @media (max-width: 768px) {
     .header {
       padding: 30px 39px; } }
-  @media (max-width: 768px) and (max-width: 680px) {
+  @media (max-width: 680px) {
     .header {
       display: block;
       padding: 0px; } }
-  .header .menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (max-width: 680px) {
+    .menu {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+  @media (max-width: 680px) {
+    .menu li {
+      width: 50%; } }
+  .menu li a {
+    padding-right: 64px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-decoration: none;
+    display: block;
+    color: #fff; }
     @media (max-width: 680px) {
-      .header .menu {
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; } }
-    @media (max-width: 680px) {
-      .header .menu li {
-        width: 50%; } }
-    .header .menu li a {
-      padding-right: 64px;
-      padding-top: 8px;
-      padding-bottom: 8px;
-      text-decoration: none;
-      display: block;
-      color: #fff; }
-      @media (max-width: 680px) {
-        .header .menu li a {
-          text-align: center;
-          padding: 8px 0;
-          border: 1px solid #fff; } }
-      .header .menu li a:hover {
-        color: #ffb100;
-        -webkit-transition: all 0.8s;
-        -o-transition: all 0.8s;
-        transition: all 0.8s; }
+      .menu li a {
+        text-align: center;
+        padding: 8px 0;
+        border: 1px solid #fff; } }
+    .menu li a:hover {
+      color: #ffb100;
+      -webkit-transition: all 0.8s;
+      -o-transition: all 0.8s;
+      transition: all 0.8s; }
 
 .menu li:last-child a {
   padding-right: 0; }
