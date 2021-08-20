@@ -69,6 +69,176 @@ img {
   padding: 0 15px; }
 
 /*主要說明區塊設定*/
+/*匯入設定*/
+/*網站主體顏色設定*/
+/*顏色設定*/
+/*文字設定*/
+/*字體設定*/
+/*行高設定*/
+/*padding設定*/
+/*mixin設定*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*RWD設定*/
+body {
+  font-family: 'Noto Sans TC', sans-serif; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px; }
+
+/*主要說明區塊設定*/
+.series-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .series-list li {
+    width: 33.3%;
+    border: 1px solid #DCDCDC; }
+  .series-list .active {
+    border-bottom: 8px solid #AA0601; }
+  .series-list a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #000;
+    padding: 32px 9px;
+    display: block;
+    text-align: center;
+    font-weight: bold; }
+
+.series-list .material-icons-outlined {
+  font-size: 34px;
+  margin-right: 10px;
+  display: inline-block;
+  font-weight: bold; }
+
+.series-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .series-banner .col-1 {
+    background: url(../images/banner-1.png) no-repeat; }
+  .series-banner .col-2 {
+    background: url(../images/banner-2.png) no-repeat; }
+
+.series-banner .col-1, .series-banner .col-2 {
+  background-size: cover;
+  height: 304px;
+  width: 50%; }
+
+.series-body {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 40px; }
+  .series-body h2.title {
+    font-size: 2.25rem;
+    margin-bottom: 16px; }
+  .series-body p {
+    font-size: 2rem; }
+
+.series-items {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .series-items li {
+    width: 23%; }
+  .series-items img {
+    height: 164px;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .series-items .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+
+.type, .price {
+  width: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 8px 0; }
+
+.content .price {
+  color: #AA0601; }
+
+ul.series-color li {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  margin-bottom: 104px; }
+
+ul.series-color li.watch-color-first {
+  background: #5F3E2D; }
+
+ul.series-color li.watch-color-sec {
+  background: #B75929; }
+
 .header {
   background-color: #AA0601;
   color: #fff;
