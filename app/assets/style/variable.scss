@@ -62,5 +62,11 @@ $padding-container:0 39px;
   padding-bottom: 28px;
 }
 
+@mixin h2-text-padding-mold{
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
 
 
